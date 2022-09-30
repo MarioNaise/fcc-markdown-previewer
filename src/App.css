@@ -1,17 +1,46 @@
+body{
+  background-color: #add8ff;
+}
+
 .flex{
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
-#editor{
-  min-height: 200px;
-  min-width: 300px;
+table {
+  border: 3px solid black;
 }
 
-#previewer{
-  display: block;
-  min-width: 600px;
-  min-height: 300px;
-  border: 1px solid black
+th, td, tr {
+  margin: 0;
+  padding: 3px;
+  outline: 1px solid black;
+}
+
+.header{
+  font-family: Verdana;
+  border: 2px solid black;
+  margin: 0;
+  border-bottom: none;
+  padding-left: 10px;
+  background-color: #339cff;
+}
+
+#editor, #preview{
+  height: auto;
+  border: 2px solid black;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #80c1ff;
+}
+
+#editor{
+  margin-bottom: 10px;
+}
+
+#preview {
+  font-family: Verdana;
+  width: 650px;
 }

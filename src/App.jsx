@@ -26,25 +26,40 @@ export default class App extends React.Component {
   render(){
     return(<main className="flex">
       <Editor markdown={this.state.markdown} onChange={this.handleChange} />
-      <div id="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.markdown, { renderer: renderer }) }}>
-      </div>
+      <Preview markdown={this.state.markdown} />
     </main>);
   }
 }
 
 
 function Editor(props){
-  return (
+  return (<div id="editorWrap">
+    <Header name="Editor"/>
     <textarea
+      rows="15"
+      cols="60"
       id="editor"
       className="flex"
       onChange={props.onChange}
       type="text"
       value={props.markdown}
     />
+    </div>
   );
 };
 
+function Preview (props){
+  return (<div id="previewWrap">
+    <Header name="Previewer"/>
+  <div id="preview" dangerouslySetInnerHTML={{ __html: marked(props.markdown, { renderer: renderer }) }}>
+      </div>
+  </div>);
+}
+
+
+function Header(props){
+  return <h2 className='header'>{props.name}</h2>;
+}
 
 const placeholder = `# Welcome to my React Markdown Previewer!
 
@@ -83,4 +98,4 @@ And here. | Okay. | I think we get it.
      - With different indentation levels.
         - That look like this.
 
-![doge](https://media.tenor.com/gTg8ZSZMR6YAAAAC/scaler-create-impact.gif)`;
+![coding](https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif)`;
