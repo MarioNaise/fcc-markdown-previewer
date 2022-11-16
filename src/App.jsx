@@ -63,6 +63,8 @@ function Header(props){
 
 const placeholder = `# Welcome to my React Markdown Previewer!
 
+___
+
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 
