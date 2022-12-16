@@ -61,7 +61,7 @@ function Header(props){
   return <h2 className='header'>{props.name}</h2>;
 }
 
-const placeholder = `# Welcome to my React Markdown Previewer!
+const placeholder = `# Welcome to my Markdown Previewer!
 
 ___
 
