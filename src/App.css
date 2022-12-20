@@ -40,7 +40,13 @@ th, td, tr {
   margin-bottom: 10px;
 }
 
+
 #preview {
   font-family: Verdana;
   width: 650px;
+}
+
+#editor::selection{
+  color: #339cff;
+  background: black;
 }
